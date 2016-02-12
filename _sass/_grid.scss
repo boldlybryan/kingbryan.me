@@ -1,0 +1,126 @@
+//Outlying structure for the grid
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: $large-wrapper;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.grid {
+  float: left;
+  padding: $spacing;
+  min-height: 1px;
+  height: 100%;
+}
+
+.grid-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-flex {
+  .one-fifth, .one-quarter, .one-third, .two-fifths, .one-half, .three-fifths, .two-thirds, .three-quarters, .four-fifths, .whole {
+    padding: $spacing;
+  }
+}
+
+//Setting the possible widths for elements - fraction based.
+
+.one-fifth {
+  width: 20%;
+}
+
+.one-quarter {
+	width: 25%;
+}
+
+.one-third {
+  width: 33.33%;
+}
+
+.two-fifths {
+  width: 40%;
+}
+
+.one-half {
+	width: 50%;
+}
+
+.three-fifths {
+  width: 60%;
+}
+
+.two-thirds {
+  width: 66.67%;
+}
+
+.three-quarters {
+  width: 75%;
+}
+
+.four-fifths {
+  width: 80%;
+}
+
+.whole {
+	width: 100%;
+}
+
+//Helper classes
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.clear {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+//Responsive breakpoints
+
+@media all and (max-width: $medium){
+
+  .grid-flex * {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: $medium){
+
+  .wrapper {
+    max-width: $medium-wrapper;
+  }
+
+}
+
+@media all and (min-width: $large){
+
+  .wrapper {
+    max-width: $large-wrapper;
+  }
+
+}
