@@ -1,94 +1,16 @@
 ---
 layout: default
 ---
-<section class="billboard" id="home">
-    <div class="container">
-      <div class="grid-flex flexbox">
-        <div class="four-fifths center-col centered">
-          <h1>Crafting digital experiences</h1>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#services" class="btn-holo">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="services">
-    <div class="container">
-      <div class="grid-flex">
-        <div class="whole">
-          <h2 class="centered">You need someone you can trust</h2>
-          <p class="lead justified">Making a web site is easy, but creating an amazing user experience takes advanced knowledge. What is user experience? Simply put, UX is the perception a visitor has after interacting with your products, services, marketing material, social media, and more. This includes the tasteful design of your branding, optimal performance of your site, and having meaningful interaction with the user.</p>
-        </div>
-      </div>
-      <div class="grid-flex">
-        <div class="one-third">
-          <h3 class="centered">Design</h3>
-          <p class="justified">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#">Learn more...</a>
-        </div>
-        <div class="one-third">
-          <h3 class="centered">Develop</h3>
-          <p class="justified">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#">Learn more...</a>
-        </div>
-        <div class="one-third">
-          <h3 class="centered">Deliver</h3>
-          <p class="justified">Your site will be hosted on speedy-fast servers in the cloud. You can sleep easy knowing that your audience will be able to visit you online without any slowdowns or periods of downtime. Before your website goes live, it will be rigorously tested to make sure it can handle the demands of your users. This includes checking on many of today's popular devices and web browsers. We need to make sure that the site functions properly, follows best practices for usablity, and will work under all circumstances. On the other end, the site should still perform extremely well at all times and keep the data of your users secure.</p>
-          <a href="#">Read more</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="about">
-    <div class="container">
-      <div class="grid-flex">
-        <div class="one-half">
-          <img src="images/img.png" />
-          <p>[insert my social icons here]</p>
-        </div>
-        <div class="one-half">
-          <h2 class="centered">About me</h2>
-          <p class="justified">Making websites is my passion. Whether I'm getting paid to complete a project or just tinkering in my spare time, I push myself to become a better webby every day. I take pride in the fact that I can start a wireframe on a blank sheet of paper, write the code to make it all work, and then push it all to the server for the world to see. I come from a business background, so I'm capable of putting together a comprehensive digital strategy to go along with a beautiful design.</p>
-          <br>
-          <p class="justified">When I'm not creating kick-ass stuff for the web, I can be found geeking out on other tech. I'm generally curious about the everyday problems I have that can be solved with technology. Other than that, I try to spend as much time as I can enjoying the great outdoors. Living in Michigan, I have access to just about any recreational activty there is, and some of the best beer in the WORLD. Also, I'm getting married to <a href="#">@ohh_k8</a>, she's pretty rad!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="blog">
-    <div class="container">
-      <div class="grid-flex">
-        <div class="two-thirds center-col">
-          <ul class="post-list">
-            {% for post in site.posts %}
-              <li>
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li class="post">
+      <h3>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h3>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <div class="lead">{{ post.excerpt }}</div>
+    </li>
+  {% endfor %}
+</ul>
 
-                <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="contact">
-    <div class="container">
-      <div class="grid-flex">
-        <div class="two-thirds center-col">
-          <h3 class="centered">Let's get in touch!</h3>
-          <form method="post" action="http://formspree.io/bpking15@gmail.com" />
-            <input type="text" name="name" placeholder="What's your name?" />
-            <input type="text" name="_replyto" placeholder="What's your email address?" />
-            <input type="text" name="_subject" placeholder="What's this about?" />
-            <input type="text" name="_gotcha" style="display:none" />
-            <input type="hidden" name="_next" value="kingbryan.me/success.html" />
-            <textarea  name="message" placeholder="Type your message here."></textarea>
-            <input type="submit" class="btn-solid full-width" />
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
