@@ -1,0 +1,47 @@
+/*Navigation*/
+.nav-top {
+  height: $nav-top-height;
+
+  .logo {
+    padding: $spacing;
+    float: left;
+  }
+
+  .menu-icon {
+    display: none;
+    width: 50px;
+  }
+
+  ul {
+
+    padding: $spacing;
+
+    li {
+      display: inline;
+      padding: $spacing;
+      line-height: 20px;
+    }
+  }
+
+}
+
+
+@media all and (max-width: $medium){
+  .nav-top {
+
+    .menu-icon {
+      display: block;
+    }
+
+    ul {
+
+      display: none;
+
+      li {
+        display: block;
+      }
+    }
+  }
+}
+
+/* end navigation*/
