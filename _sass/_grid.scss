@@ -107,6 +107,11 @@
   .grid-flex * {
     width: 100%;
   }
+
+  .wrapper {
+    margin: 0 5%;
+  }
+
 }
 
 @media all and (min-width: $medium){
