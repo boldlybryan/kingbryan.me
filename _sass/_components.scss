@@ -1,15 +1,25 @@
 /*Navigation*/
 .nav-top {
   height: $nav-top-height;
+  line-height: 40px;
+  //border-bottom: 1px solid black;
 
   .logo {
     padding: $spacing 0px;
     float: left;
+    font-size: 40px;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+    }
+
   }
 
   .menu-icon {
     display: none;
-    width: 50px;
+    width: 40px;
+    padding: $spacing 0px;
   }
 
   ul {
@@ -23,6 +33,19 @@
     }
   }
 
+  .nav-items .page-link {
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+}
+
+@media all and (min-width: $medium){
+
+  .nav-items {
+    display: block;
+  }
+
 }
 
 
@@ -33,9 +56,15 @@
       display: block;
     }
 
+    .nav-items {
+      width: 100%;
+      display: none;
+      padding-bottom: $spacing;
+    }
+
     ul {
 
-      display: none;
+      padding: 0;
 
       li {
         display: block;
@@ -44,9 +73,27 @@
   }
 }
 
+.post-list .post:first-of-type {
+  padding-top: 0px;
+}
+
 /* end navigation*/
 
 /* posts */
 .post {
   list-style: none;
+  padding: $spacing 0;
+
+  .post-meta {
+    margin: $spacing / 2 0;
+  }
+
+}
+
+/*end posts*/
+
+/* footer */
+footer {
+  text-align: center;
+  padding: $spacing;
 }
