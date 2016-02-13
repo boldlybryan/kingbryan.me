@@ -109,7 +109,7 @@
   }
 
   .wrapper {
-    margin: 0 5%;
+    margin: 0 4%;
   }
 
 }
@@ -118,14 +118,6 @@
 
   .wrapper {
     max-width: $medium-wrapper;
-  }
-
-}
-
-@media all and (min-width: $large){
-
-  .wrapper {
-    max-width: $large-wrapper;
   }
 
 }
