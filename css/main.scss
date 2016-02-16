@@ -7,15 +7,17 @@
 $small: 320px;
 $small-wrapper: 300px;
 $medium: 768px;
-$medium-wrapper: 750px;
+$medium-wrapper: 700px;
 $large: 1024px;
-$large-wrapper: 1000px;
+$large-wrapper: 850px;
 $spacing: 20px;
-$nav-top-height: 60px;
+$nav-top-height: 80px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "normalize",
         "grid",
-        "components"
+        "typography",
+        "components",
+        "theme"
 ;

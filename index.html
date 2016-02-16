@@ -9,8 +9,7 @@ layout: default
       </h3>
       <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
       <div class="justified">{{ post.excerpt | truncatewords:50 }}</div>
-      <br>
-      <p><a href="{{ post.url | prepend: site.baseurl }}">keep reading...</a></p>
+      <p class="read-more"><a href="{{ post.url | prepend: site.baseurl }}">keep reading...</a></p>
     </li>
   {% endfor %}
 </ul>

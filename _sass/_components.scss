@@ -2,13 +2,13 @@
 .nav-top {
   height: $nav-top-height;
   line-height: 40px;
-  //border-bottom: 1px solid black;
 
   .logo {
     padding: $spacing 0px;
     float: left;
     font-size: 40px;
     text-transform: uppercase;
+    font-weight: 500;
 
     a {
       text-decoration: none;
@@ -59,7 +59,6 @@
     .nav-items {
       width: 100%;
       display: none;
-      padding-bottom: $spacing;
     }
 
     ul {
@@ -84,11 +83,37 @@
   list-style: none;
   padding: $spacing 0;
 
+  h3 {
+    margin-top: 0;
+  }
+
   .post-meta {
-    margin: $spacing / 2 0;
+    padding-top: $spacing / 2;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .read-more {
+    padding: 0;
   }
 
 }
+
+.archive-post {
+  border-bottom: 1px solid black;
+  padding: $spacing/2 0;
+  list-style: none;
+
+  h4 {
+    margin: 0;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+}
+
 
 /*end posts*/
 
@@ -96,4 +121,7 @@
 footer {
   text-align: center;
   padding: $spacing;
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }
