@@ -65,10 +65,32 @@ li {
 }
 
 blockquote {
-  border-left: 2px solid black;
-  font-family: 'Roboto' Condensed, sans-serif;
-  font-size: 1.2em;
-  padding: .5em;
+  border-left: 2px solid #616161;
+  padding: 0 $spacing;
+  margin: $spacing 0;
+
+  p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1em;
+  }
+
+}
+
+pre {
+  border: 1px solid#616161;
+  padding: $spacing;
+  margin: $spacing 0;
+  background-color: #616161;
+  color: #e0e0e0;
+  border-radius: 5px;
+}
+
+code {
+  background-color: #616161;
+  color: #e0e0e0;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 18px;
 }
 
 .centered {

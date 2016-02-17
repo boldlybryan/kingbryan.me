@@ -19,7 +19,7 @@
   .menu-icon {
     display: none;
     width: 40px;
-    padding: $spacing 0px;
+    padding: $spacing+2 0px;
   }
 
   ul {
@@ -95,6 +95,8 @@
 
   .read-more {
     padding: 0;
+    font-size: 18px;
+    text-decoration: none;
   }
 
 }
@@ -125,3 +127,4 @@ footer {
   position: relative;
   bottom: 0;
 }
+/* end footer */
