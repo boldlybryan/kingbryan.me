@@ -100,6 +100,10 @@
   clear: both;
 }
 
+.inline {
+  display: inline;
+}
+
 //Responsive breakpoints
 
 @media all and (max-width: $medium){
