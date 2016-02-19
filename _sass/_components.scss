@@ -43,7 +43,7 @@
 @media all and (min-width: $medium){
 
   .nav-items {
-    display: block;
+    display: block !important;
   }
 
 }
@@ -59,6 +59,7 @@
     .nav-items {
       width: 100%;
       display: none;
+      margin-bottom: $spacing;
     }
 
     ul {
@@ -176,8 +177,35 @@ textarea {
 footer {
   text-align: center;
   padding: $spacing;
-  width: 100%;
-  position: relative;
+  position: absolute;
+  left: 0;
   bottom: 0;
+  height: 100px;
+  width: 100%;
 }
+
+footer .copyright {
+  font-size: 14px;
+}
+
+body {
+  margin-bottom: 100px;
+}
+
+footer .social-links li {
+  display: inline;
+  padding: $spacing/2;
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+@media all and (max-width: $medium) {
+  footer .social-links li {
+    display: block;
+  }
+}
+
 /* end footer */
